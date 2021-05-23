@@ -1,4 +1,4 @@
-# powerline-k8s
+# powerline-k8s ![PyPI](https://img.shields.io/pypi/v/powerline-k8s)
 
 A custom [Powerline](https://github.com/powerline/powerline) segment for displaying the current Kubernetes context and namespace.
 
@@ -6,9 +6,15 @@ A custom [Powerline](https://github.com/powerline/powerline) segment for display
 
 ## Installation
 
-### Local env
+### Using pip
 
-`$ pip install .`
+`$ pip install powerline-k8s`
+
+## Local development
+
+`$ pip install --editable .`
+
+Installing the package in editable mode saves you from having to "re-install" to see the latest changes.
 
 ## Configuration
 
