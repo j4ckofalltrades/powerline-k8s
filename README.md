@@ -14,8 +14,8 @@ A custom [Powerline](https://github.com/powerline/powerline) segment for display
 
 ### Colorscheme
 
-Add the following config items to your Powerline colorscheme config file, usually located at `~/.config/powerline/colorschemes/`.
-See [Powerline Colorschemes](https://powerline.readthedocs.io/en/master/configuration/reference.html#colorschemes) for more info.
+Add the following config items to your Powerline colorscheme config file (usually located at `~/.config/powerline/colorschemes/`),
+see [Powerline Colorschemes](https://powerline.readthedocs.io/en/master/configuration/reference.html#colorschemes) for more info.
 
 ```json
 {
@@ -28,8 +28,8 @@ See [Powerline Colorschemes](https://powerline.readthedocs.io/en/master/configur
 
 ### Segment
 
-Add the following config item to your Powerline segments config file, usually located at `~/.config/powerline/themes/shell/`.
-See [Powerline Segment reference](https://powerline.readthedocs.io/en/master/configuration/segments.html#segment-reference) for more info.
+Add the following config item to your Powerline segments config file (usually located at `~/.config/powerline/themes/shell/`),
+see [Powerline Segment reference](https://powerline.readthedocs.io/en/master/configuration/segments.html#segment-reference) for more info.
 
 ```json
 {
@@ -40,17 +40,17 @@ See [Powerline Segment reference](https://powerline.readthedocs.io/en/master/con
 
 ### Toggle visibility
 
-Toggle segment or specific section's visibility with the following environment variables:
+Toggle entire segment or specific section's visibility with the following environment variables:
 
-- `POWERLINE_KS_SHOW`
-- `POWERLINE_KS_SHOW_NS`
+- `POWERLINE_K8S_SHOW`
+- `POWERLINE_K8S_SHOW_NS`
 
 ```shell
 # toggle segment visibility
-$ POWERLINE_KS_SHOW=0 powerline-daemon --replace # hide powerline-k8s segment
-$ POWERLINE_KS_SHOW=1 powerline-daemon --replace # show powerline-k8s segment (default)
+$ POWERLINE_K8S_SHOW=0 powerline-daemon --replace # hide powerline-k8s segment
+$ POWERLINE_K8S_SHOW=1 powerline-daemon --replace # show powerline-k8s segment (default)
 
 # toggle namespace section visibility
-$ POWERLINE_KS_SHOW_NS=0 powerline-daemon --replace # hide namespace section
-$ POWERLINE_KS_SHOW_NS=1 powerline-daemon --replace # show namespace section (default)
+$ POWERLINE_K8S_SHOW_NS=0 powerline-daemon --replace # hide namespace section
+$ POWERLINE_K8S_SHOW_NS=1 powerline-daemon --replace # show namespace section (default)
 ```

@@ -25,46 +25,52 @@ class KubernetesSegment(Segment):
     def __call__(self, pl):
         pl.debug('Running powerline-k8s')
 
-        segments = []
+        sections = []
 
         ctx_info = self.kube_ctx_info(pl)
         if ctx_info is None:
-            return segments
+            return sections
 
-        show_segment = os.getenv("POWERLINE_K8S_SHOW", 1)
-        if int(show_segment) == 0:
-            return segments
+        show_segment = os.getenv("POWERLINE_K8S_SHOW")
+        if show_segment is None:
+            pass
+        elif int(show_segment) == 0:
+            return sections
 
-        segments.append({
+        sections.append({
             'contents': f'{K8S_ICON} ',
             'highlight_groups': ['k8s'],
             'divider_highlight_group': 'k8s:divider',
         })
 
         context = ctx_info[0]
-        segments.append({
+        sections.append({
             'contents': context,
             'highlight_groups': ['k8s_context'],
             'divider_highlight_group': 'k8s:divider',
         })
 
-        show_namespace = os.getenv("POWERLINE_K8S_SHOW_NS", 1)
-        if int(show_namespace) == 1:
-            separator = ':'
-            segments.append({
-                'contents': separator,
-                'highlight_groups': ['k8s'],
-                'divider_highlight_group': 'k8s:divider',
-            })
+        show_namespace = os.getenv("POWERLINE_K8S_SHOW_NS")
+        if show_namespace is None:
+            pass
+        elif int(show_namespace) == 0:
+            return sections
 
-            namespace = ctx_info[1]
-            segments.append({
-                'contents': namespace,
-                'highlight_groups': ['k8s_namespace'],
-                'divider_highlight_group': 'k8s:divider',
-            })
+        separator = ':'
+        sections.append({
+            'contents': separator,
+            'highlight_groups': ['k8s'],
+            'divider_highlight_group': 'k8s:divider',
+        })
 
-        return segments
+        namespace = ctx_info[1]
+        sections.append({
+            'contents': namespace,
+            'highlight_groups': ['k8s_namespace'],
+            'divider_highlight_group': 'k8s:divider',
+        })
+
+        return sections
 
 
 k8s = with_docstring(KubernetesSegment(), '''Return the current Kubernetes context and namespace.
@@ -74,6 +80,4 @@ It will show the current context and namespace from the kube-config file.
 Divider highlight group used: ``k8s:divider``.
 
 Highlight groups used: ``k8s``, ``k8s_context``, ``k8s_namespace``.
-
-Toggle segment visibility by setting the 
 ''')
