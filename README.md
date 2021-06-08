@@ -1,4 +1,6 @@
-# powerline-k8s [![PyPI](https://img.shields.io/pypi/v/powerline-k8s)](https://pypi.org/project/powerline-k8s/) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/powerline-k8s)
+# powerline-k8s
+[![PyPI](https://img.shields.io/pypi/v/powerline-k8s)](https://pypi.org/project/powerline-k8s/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/powerline-k8s)
 
 A custom [Powerline](https://github.com/powerline/powerline) segment for displaying the current Kubernetes context and namespace.
 
