@@ -4,7 +4,7 @@
 
 A custom [Powerline](https://github.com/powerline/powerline) segment for displaying the current Kubernetes context and namespace.
 
-![](sample.png)
+![](https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png)
 
 ## Installation
 
@@ -12,7 +12,7 @@ A custom [Powerline](https://github.com/powerline/powerline) segment for display
 
 `$ pip install powerline-k8s`
 
-## Local development
+### Local development
 
 `$ pip install --editable .`
 
