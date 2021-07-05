@@ -9,9 +9,6 @@ K8S_ICON = u'\U00002638'
 
 
 class KubernetesSegment(Segment):
-    '''
-    Attempt to parse the current context and namespace from the kube-config file.
-    '''
 
     @staticmethod
     def kube_ctx_info(pl):
