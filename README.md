@@ -62,3 +62,7 @@ $ POWERLINE_K8S_SHOW=1 powerline-daemon --replace # show powerline-k8s segment (
 $ POWERLINE_K8S_SHOW_NS=0 powerline-daemon --replace # hide namespace section
 $ POWERLINE_K8S_SHOW_NS=1 powerline-daemon --replace # show namespace section (default)
 ```
+
+## Demo
+
+[![asciicast](https://asciinema.org/a/424536.svg)](https://asciinema.org/a/424536?autoplay=1&speed=2)
