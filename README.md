@@ -36,7 +36,7 @@ see [Powerline Colorschemes](https://powerline.readthedocs.io/en/master/configur
 
 ### Segment
 
-Add the following config item to your Powerline segments config file (usually located at `~/.config/powerline/themes/shell/`),
+Add the following config item to your Powerline segments config file,
 see [Powerline Segment reference](https://powerline.readthedocs.io/en/master/configuration/segments.html#segment-reference) for more info.
 
 ```json
@@ -45,6 +45,9 @@ see [Powerline Segment reference](https://powerline.readthedocs.io/en/master/con
   "priority": 30
 }
 ```
+
+- If adding the segment to the shell, edit `~/.config/powerline/themes/shell/default.json`.
+- If adding the segment to the tmux status line, edit `~/.config/powerline/themes/tmux/default.json`.
 
 ### Toggle visibility
 
@@ -62,6 +65,10 @@ $ POWERLINE_K8S_SHOW=1 powerline-daemon --replace # show powerline-k8s segment (
 $ POWERLINE_K8S_SHOW_NS=0 powerline-daemon --replace # hide namespace section
 $ POWERLINE_K8S_SHOW_NS=1 powerline-daemon --replace # show namespace section (default)
 ```
+
+## Docs
+
+For more detailed documentation see [https://j4ckofalltrades.github.io/powerline-k8s](https://j4ckofalltrades.github.io/powerline-k8s).
 
 ## Demo
 
