@@ -1,10 +1,12 @@
 name: Codecov
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
-  cov:
+  coverage:
     runs-on: ubuntu-latest
     env:
       OS: ubuntu-latest
