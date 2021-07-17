@@ -1,6 +1,11 @@
 .idea/
 *.egg-info/
 **/__pycache__/
+
 build/
 dist/
 docs/
+
+.coverage
+coverage.xml
+htmlcov/

@@ -51,7 +51,6 @@ class KubernetesSegment(Segment):
     def kube_ctx_info(pl):
         """Resolves the current active Kubernetes context (and namespace) from `$KUBECONFIG`."""
         try:
-            config.load_kube_config()
             current_context = config.list_kube_config_contexts()[1]
             return current_context['name'] or SegmentContent.CTX_DEFAULT.value, \
                    current_context['context']['namespace'] or SegmentContent.NS_DEFAULT.value
@@ -59,7 +58,7 @@ class KubernetesSegment(Segment):
             pl.error(e)
 
     def __call__(self, pl):
-        pl.debug('Running powerline-k8s')
+        pl.debug('Running powerline-k8s...')
 
         sections = []
 
