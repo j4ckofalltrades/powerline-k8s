@@ -58,6 +58,8 @@ Toggle entire segment or specific section's visibility with the following enviro
 - `POWERLINE_K8S_SHOW`
 - `POWERLINE_K8S_SHOW_NS`
 
+Note: Full segment visibility takes precedence over namespace section visibility.
+
 ```shell
 # toggle segment visibility
 $ POWERLINE_K8S_SHOW=0 powerline-daemon --replace # hide powerline-k8s segment
@@ -66,6 +68,28 @@ $ POWERLINE_K8S_SHOW=1 powerline-daemon --replace # show powerline-k8s segment (
 # toggle namespace section visibility
 $ POWERLINE_K8S_SHOW_NS=0 powerline-daemon --replace # hide namespace section
 $ POWERLINE_K8S_SHOW_NS=1 powerline-daemon --replace # show namespace section (default)
+```
+
+Alternatively you can add the following function to your shell for easier toggling:
+
+```shell
+toggle_powerline_k8s() {
+  # pass the '-ns' or '--namespace' flag to toggle namespace visibility
+  if [[ "$1" == "-ns" || "$1" == "--namespace" ]]; then
+    if [[ "${POWERLINE_K8S_SHOW_NS:-0}" -eq 0 ]]; then
+      export POWERLINE_K8S_SHOW_NS=1
+    else
+      export POWERLINE_K8S_SHOW_NS=0
+    fi
+  else
+    # toggle segment visibility
+    if [[ "${POWERLINE_K8S_SHOW:-0}" -eq 0 ]]; then
+      export POWERLINE_K8S_SHOW=1
+    else
+      export POWERLINE_K8S_SHOW=0
+    fi
+  fi
+}
 ```
 
 ## Docs
