@@ -70,7 +70,8 @@ powerline_k8s    </h1>
                         <div class="docstring"><h1 id="powerline-k8s">powerline-k8s</h1>
 
 <p><a href="https://pypi.org/project/powerline-k8s/"><img src="https://img.shields.io/pypi/v/powerline-k8s" alt="PyPI" /></a>
-<img src="https://img.shields.io/pypi/pyversions/powerline-k8s" alt="PyPI - Python Version" /></p>
+<img src="https://img.shields.io/pypi/pyversions/powerline-k8s" alt="PyPI - Python Version" />
+<a href="https://codecov.io/gh/j4ckofalltrades/powerline-k8s"><img src="https://codecov.io/gh/j4ckofalltrades/powerline-k8s/branch/main/graph/badge.svg?token=J5GLE5ZY2V" alt="codecov" /></a></p>
 
 <p>A custom <a href="https://github.com/powerline/powerline">Powerline</a> segment for displaying the current Kubernetes context and namespace.</p>
 
@@ -128,6 +129,8 @@ see <a href="https://powerline.readthedocs.io/en/master/configuration/segments.h
 <li><code>POWERLINE_K8S_SHOW_NS</code></li>
 </ul>
 
+<p>Note: Full segment visibility takes precedence over namespace section visibility.</p>
+
 <div class="codehilite"><pre><span></span><code><span class="c1"># toggle segment visibility</span>
 $ <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">0</span> powerline-daemon --replace <span class="c1"># hide powerline-k8s segment</span>
 $ <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">1</span> powerline-daemon --replace <span class="c1"># show powerline-k8s segment (default)</span>
@@ -135,6 +138,30 @@ $ <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class=
 <span class="c1"># toggle namespace section visibility</span>
 $ <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">0</span> powerline-daemon --replace <span class="c1"># hide namespace section</span>
 $ <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">1</span> powerline-daemon --replace <span class="c1"># show namespace section (default)</span>
+</code></pre></div>
+
+<p>Alternatively you can add the following function to your shell for easier toggling:</p>
+
+<div class="codehilite"><pre><span></span><code>toggle_powerline_k8s<span class="o">()</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="k">in</span>
+    <span class="c1"># pass the &#39;-ns&#39; flag to toggle namespace visibility</span>
+    <span class="s2">&quot;-ns&quot;</span> <span class="p">|</span> <span class="s2">&quot;--namespace&quot;</span><span class="o">)</span>
+      <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span> -eq <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">0</span>
+      <span class="k">else</span>
+        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">1</span>
+      <span class="k">fi</span>
+    <span class="p">;;</span>
+    *<span class="o">)</span>
+      <span class="c1"># toggle segment visibility</span>
+      <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">POWERLINE_K8S_SHOW</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span> -eq <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">0</span>
+      <span class="k">else</span>
+        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">1</span>
+      <span class="k">fi</span>
+    <span class="p">;;</span>
+  <span class="k">esac</span>
+<span class="o">}</span>
 </code></pre></div>
 
 <h2 id="docs">Docs</h2>
