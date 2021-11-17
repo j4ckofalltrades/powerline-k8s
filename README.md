@@ -102,3 +102,8 @@ For more detailed documentation see [https://j4ckofalltrades.github.io/powerline
 ## Demo
 
 [![asciicast](https://asciinema.org/a/424536.svg)](https://asciinema.org/a/424536?autoplay=1&speed=2)
+
+
+## Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/fbba579306e9c836bd6aa443e43637a0131c45f3.svg "Repobeats analytics image")
