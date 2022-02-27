@@ -97,7 +97,7 @@ toggle_powerline_k8s() {
 
 ## Docs
 
-For more detailed documentation see [https://j4ckofalltrades.github.io/powerline-k8s](https://j4ckofalltrades.github.io/powerline-k8s).
+For more detailed documentation see [https://j4ckofalltrades.github.io/powerline-k8s](https://j4ckofalltrades.github.io/powerline-k8s)
 
 ## Demo
 
