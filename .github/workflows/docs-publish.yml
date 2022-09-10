@@ -21,8 +21,7 @@ jobs:
         run: |
           python -m pip install poetry
           poetry install
-          python -m pip install pdoc --user
-          python -m pdoc -o docs src/powerline_k8s
+          poetry run pdoc -o docs src/powerline_k8s
 
       - uses: peaceiris/actions-gh-pages@v3
         with:

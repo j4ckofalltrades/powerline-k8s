@@ -20,6 +20,7 @@ jobs:
       - name: Install pypa/build
         run: |
           python -m pip install poetry
+          poetry install --without test,docs
           poetry build
 
       - name: Publish package
