@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*.*.*'
+  workflow_dispatch:
 
 jobs:
   docs:
@@ -18,7 +19,8 @@ jobs:
 
       - name: Generate docs
         run: |
-          python -m pip install .
+          python -m pip install poetry
+          poetry install
           python -m pip install pdoc --user
           python -m pdoc -o docs src/powerline_k8s
 
