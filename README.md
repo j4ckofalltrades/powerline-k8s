@@ -14,12 +14,6 @@ A custom [Powerline](https://github.com/powerline/powerline) segment for display
 
 `$ pip install powerline-k8s`
 
-### Local development
-
-`$ pip install --editable .`
-
-Installing the package in editable mode saves you from having to "re-install" to see the latest changes.
-
 ## Configuration
 
 ### Colorscheme
