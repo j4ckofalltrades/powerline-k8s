@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="pdoc 12.1.0"/>
+    <meta name="generator" content="pdoc 12.3.1"/>
     <title>powerline_k8s API documentation</title>
 
     <style>/*! * Bootstrap Reboot v5.0.0 (https://getbootstrap.com/) * Copyright 2011-2021 The Bootstrap Authors * Copyright 2011-2021 Twitter, Inc. * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE) * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md) */*,::after,::before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}hr{margin:1rem 0;color:inherit;background-color:currentColor;border:0;opacity:.25}hr:not([size]){height:1px}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}abbr[data-bs-original-title],abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none}address{margin-bottom:1rem;font-style:normal;line-height:inherit}ol,ul{padding-left:2rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote{margin:0 0 1rem}b,strong{font-weight:bolder}small{font-size:.875em}mark{padding:.2em;background-color:#fcf8e3}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#0d6efd;text-decoration:underline}a:hover{color:#0a58ca}a:not([href]):not([class]),a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;direction:ltr;unicode-bidi:bidi-override}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:#d63384;word-wrap:break-word}a>code{color:inherit}kbd{padding:.2rem .4rem;font-size:.875em;color:#fff;background-color:#212529;border-radius:.2rem}kbd kbd{padding:0;font-size:1em;font-weight:700}figure{margin:0 0 1rem}img,svg{vertical-align:middle}table{caption-side:bottom;border-collapse:collapse}caption{padding-top:.5rem;padding-bottom:.5rem;color:#6c757d;text-align:left}th{text-align:inherit;text-align:-webkit-match-parent}tbody,td,tfoot,th,thead,tr{border-color:inherit;border-style:solid;border-width:0}label{display:inline-block}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button,input,optgroup,select,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,select{text-transform:none}[role=button]{cursor:pointer}select{word-wrap:normal}select:disabled{opacity:1}[list]::-webkit-calendar-picker-indicator{display:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled){cursor:pointer}::-moz-focus-inner{padding:0;border-style:none}textarea{resize:vertical}fieldset{min-width:0;padding:0;margin:0;border:0}legend{float:left;width:100%;padding:0;margin-bottom:.5rem;font-size:calc(1.275rem + .3vw);line-height:inherit}@media (min-width:1200px){legend{font-size:1.5rem}}legend+*{clear:left}::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-text,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:textfield}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::file-selector-button{font:inherit}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}iframe{border:0}summary{display:list-item;cursor:pointer}progress{vertical-align:baseline}[hidden]{display:none!important}</style>
@@ -38,6 +38,10 @@
         <ul>
                 <li><a href="powerline_k8s/segments.html">segments</a></li>
         </ul>
+
+        <h2>API Documentation</h2>
+            <ul class="memberlist">
+    </ul>
 
 
 
@@ -76,24 +80,28 @@ powerline_k8s    </h1>
 <p>Add the following config items to your Powerline colorscheme config file (usually located at <code>~/.config/powerline/colorschemes/</code>),
 see <a href="https://powerline.readthedocs.io/en/master/configuration/reference.html#colorschemes">Powerline Colorschemes</a> for more info.</p>
 
-<div class="pdoc-code codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;k8s&quot;</span><span class="p">:</span><span class="w">           </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;k8s_namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:red&quot;</span><span class="p">,</span><span class="w">  </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;k8s_context&quot;</span><span class="p">:</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;k8s:divider&quot;</span><span class="p">:</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gray4&quot;</span><span class="p">,</span><span class="w">          </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
+<div class="pdoc-code codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;k8s&quot;</span><span class="p">:</span><span class="w">           </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;k8s_namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:red&quot;</span><span class="p">,</span><span class="w">  </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;k8s_context&quot;</span><span class="p">:</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;k8s:divider&quot;</span><span class="p">:</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;fg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;gray4&quot;</span><span class="p">,</span><span class="w">          </span><span class="nt">&quot;bg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;solarized:base02&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;attrs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <h3 id="segment">Segment</h3>
 
 <p>Add the following config item to your Powerline segments config file,
 see <a href="https://powerline.readthedocs.io/en/master/configuration/segments.html#segment-reference">Powerline Segment reference</a> for more info.</p>
 
-<div class="pdoc-code codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;powerline_k8s.k8s&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
+<div class="pdoc-code codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;powerline_k8s.k8s&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <ul>
 <li>If adding the segment to the shell, edit <code>~/.config/powerline/themes/shell/default.json</code>.</li>
@@ -111,38 +119,42 @@ see <a href="https://powerline.readthedocs.io/en/master/configuration/segments.h
 
 <p>Note: Full segment visibility takes precedence over namespace section visibility.</p>
 
-<div class="pdoc-code codehilite"><pre><span></span><code><span class="c1"># toggle segment visibility</span>
-$ <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">0</span> powerline-daemon --replace <span class="c1"># hide powerline-k8s segment</span>
-$ <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">1</span> powerline-daemon --replace <span class="c1"># show powerline-k8s segment (default)</span>
+<div class="pdoc-code codehilite">
+<pre><span></span><code><span class="c1"># toggle segment visibility</span>
+$<span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">0</span><span class="w"> </span>powerline-daemon<span class="w"> </span>--replace<span class="w"> </span><span class="c1"># hide powerline-k8s segment</span>
+$<span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>powerline-daemon<span class="w"> </span>--replace<span class="w"> </span><span class="c1"># show powerline-k8s segment (default)</span>
 
 <span class="c1"># toggle namespace section visibility</span>
-$ <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">0</span> powerline-daemon --replace <span class="c1"># hide namespace section</span>
-$ <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">1</span> powerline-daemon --replace <span class="c1"># show namespace section (default)</span>
-</code></pre></div>
+$<span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">0</span><span class="w"> </span>powerline-daemon<span class="w"> </span>--replace<span class="w"> </span><span class="c1"># hide namespace section</span>
+$<span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>powerline-daemon<span class="w"> </span>--replace<span class="w"> </span><span class="c1"># show namespace section (default)</span>
+</code></pre>
+</div>
 
 <p>Alternatively you can add the following function to your shell for easier toggling:</p>
 
-<div class="pdoc-code codehilite"><pre><span></span><code>toggle_powerline_k8s<span class="o">()</span> <span class="o">{</span>
-  <span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="k">in</span>
-    <span class="c1"># pass the &#39;-ns&#39; flag to toggle namespace visibility</span>
-    <span class="s2">&quot;-ns&quot;</span> <span class="p">|</span> <span class="s2">&quot;--namespace&quot;</span><span class="o">)</span>
-      <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span> -eq <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">0</span>
-      <span class="k">else</span>
-        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">1</span>
-      <span class="k">fi</span>
-    <span class="p">;;</span>
-    *<span class="o">)</span>
-      <span class="c1"># toggle segment visibility</span>
-      <span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">POWERLINE_K8S_SHOW</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span> -eq <span class="m">1</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">0</span>
-      <span class="k">else</span>
-        <span class="nb">export</span> <span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">1</span>
-      <span class="k">fi</span>
-    <span class="p">;;</span>
-  <span class="k">esac</span>
+<div class="pdoc-code codehilite">
+<pre><span></span><code>toggle_powerline_k8s<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span><span class="c1"># pass the &#39;-ns&#39; flag to toggle namespace visibility</span>
+<span class="w">    </span><span class="s2">&quot;-ns&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="s2">&quot;--namespace&quot;</span><span class="o">)</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">0</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span class="m">1</span>
+<span class="w">      </span><span class="k">fi</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>*<span class="o">)</span>
+<span class="w">      </span><span class="c1"># toggle segment visibility</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">POWERLINE_K8S_SHOW</span><span class="k">:-</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">0</span>
+<span class="w">      </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">POWERLINE_K8S_SHOW</span><span class="o">=</span><span class="m">1</span>
+<span class="w">      </span><span class="k">fi</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">  </span><span class="k">esac</span>
 <span class="o">}</span>
-</code></pre></div>
+</code></pre>
+</div>
 
 <h2 id="docs">Docs</h2>
 
@@ -157,9 +169,9 @@ $ <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span cla
 <p><img src="https://repobeats.axiom.co/api/embed/fbba579306e9c836bd6aa443e43637a0131c45f3.svg" alt="Alt" title="Repobeats analytics image" /></p>
 </div>
 
-                        <input id="powerline_k8s-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                        <input id="mod-powerline_k8s-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 
-                        <label class="view-source-button" for="powerline_k8s-view-source"><span>View Source</span></label>
+                        <label class="view-source-button" for="mod-powerline_k8s-view-source"><span>View Source</span></label>
 
                         <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">1</span></a><span class="c1"># -*- coding: utf-8 -*-</span>
 </span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a>
@@ -274,7 +286,7 @@ $ <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span cla
                 }
 
                 let heading;
-                switch (result.doc.type) {
+                switch (result.doc.kind) {
                     case "function":
                         if (doc.fullname.endsWith(".__init__")) {
                             heading = `<span class="name">${doc.fullname.replace(/\.__init__$/, "")}</span>${doc.signature}`;
@@ -301,7 +313,7 @@ $ <span class="nv">POWERLINE_K8S_SHOW_NS</span><span class="o">=</span><span cla
                 }
                 html += `
                         <section class="search-result">
-                        <a href="${url}" class="attr ${doc.type}">${heading}</a>
+                        <a href="${url}" class="attr ${doc.kind}">${heading}</a>
                         <div class="docstring">${doc.doc}</div>
                         </section>
                     `;
