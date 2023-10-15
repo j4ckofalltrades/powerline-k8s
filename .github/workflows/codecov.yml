@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OS: ubuntu-latest
-      PYTHON: '3.7'
+      PYTHON: '3.9'
     steps:
     - uses: actions/checkout@v3
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.7
+        python-version: 3.9
 
     - name: Generate coverage report
       run: |
