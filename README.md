@@ -1,7 +1,8 @@
-# powerline-k8s
+![powerline-k8s](https://res.cloudinary.com/j4ckofalltrades/image/upload/v1697278938/foss/gh-social-icons/powerline-k8s_arypmi.png)
 
 [![PyPI](https://img.shields.io/pypi/v/powerline-k8s)](https://pypi.org/project/powerline-k8s/)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/powerline-k8s)
+![PyPI_Python_Version](https://img.shields.io/pypi/pyversions/powerline-k8s)
+[![Docs](https://img.shields.io/badge/docs-green?link=j4ckofalltrades.github.io%2Fpowerline--k8s)](https://j4ckofalltrades.github.io/powerline-k8s)
 [![codecov](https://codecov.io/gh/j4ckofalltrades/powerline-k8s/branch/main/graph/badge.svg?token=J5GLE5ZY2V)](https://codecov.io/gh/j4ckofalltrades/powerline-k8s)
 
 A custom [Powerline](https://github.com/powerline/powerline) segment for displaying the current Kubernetes context and namespace.
@@ -89,9 +90,7 @@ toggle_powerline_k8s() {
 }
 ```
 
-## Docs
-
-For more detailed documentation see [https://j4ckofalltrades.github.io/powerline-k8s](https://j4ckofalltrades.github.io/powerline-k8s)
+Check out the [docs](https://j4ckofalltrades.github.io/powerline-k8s).
 
 ## Demo
 
