@@ -90,8 +90,6 @@ toggle_powerline_k8s() {
 }
 ```
 
-Check out the [docs](https://j4ckofalltrades.github.io/powerline-k8s).
-
 ## Demo
 
 [![asciicast](https://asciinema.org/a/424536.svg)](https://asciinema.org/a/424536?autoplay=1&speed=2)
