@@ -55,7 +55,7 @@ class KubernetesSegment(Segment):
         try:
             current_context = config.list_kube_config_contexts()[1]
             return current_context['name'] or SegmentContent.CTX_DEFAULT.value, \
-                   current_context['context']['namespace'] or SegmentContent.NS_DEFAULT.value
+                current_context['context']['namespace'] or SegmentContent.NS_DEFAULT.value
         except Exception as e:
             pl.error(e)
 

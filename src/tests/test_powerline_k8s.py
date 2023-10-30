@@ -24,7 +24,7 @@ def build_k8s_segment(context=CONTEXT_MOCK, namespace=NAMESPACE_MOCK, hide_ns=Fa
         'highlight_groups': [SegmentColorscheme.CONTEXT_HIGHLIGHT_GROUP.value]
     }
 
-    if hide_ns == True:
+    if hide_ns:
         return [icon_section, context_section]
 
     return [
@@ -62,7 +62,7 @@ def mock_hide_namespace_section_config(monkeypatch):
 @pytest.fixture
 def mock_k8s_context_full(monkeypatch):
     def mock_list_contexts():
-        return ([{}, {'context': {'cluster': CLUSTER_MOCK, 'namespace': NAMESPACE_MOCK}, 'name': CONTEXT_MOCK}])
+        return [{}, {'context': {'cluster': CLUSTER_MOCK, 'namespace': NAMESPACE_MOCK}, 'name': CONTEXT_MOCK}]
 
     monkeypatch.setattr(config, 'list_kube_config_contexts', mock_list_contexts)
 
@@ -70,7 +70,7 @@ def mock_k8s_context_full(monkeypatch):
 @pytest.fixture
 def mock_k8s_namespace_empty(monkeypatch):
     def mock_list_contexts():
-        return ([{}, {'context': {'cluster': CLUSTER_MOCK, 'namespace': ''}, 'name': CONTEXT_MOCK}])
+        return [{}, {'context': {'cluster': CLUSTER_MOCK, 'namespace': ''}, 'name': CONTEXT_MOCK}]
 
     monkeypatch.setattr(config, 'list_kube_config_contexts', mock_list_contexts)
 
