@@ -74,6 +74,12 @@ def mock_k8s_namespace_empty(monkeypatch):
 
     monkeypatch.setattr(config, 'list_kube_config_contexts', mock_list_contexts)
 
+@pytest.fixture
+def mock_k8s_no_namespace(monkeypatch):
+    def mock_list_contexts():
+        return [{}, {'context': {'cluster': CLUSTER_MOCK}, 'name': CONTEXT_MOCK}]
+
+    monkeypatch.setattr(config, 'list_kube_config_contexts', mock_list_contexts)
 
 @pytest.fixture
 def mock_no_kubeconfig(monkeypatch):
@@ -89,7 +95,12 @@ def test_full_segment(mock_pl):
 
 
 @pytest.mark.usefixtures('mock_k8s_namespace_empty')
-def test_namespace_default(mock_pl):
+def test_empty_namespace(mock_pl):
+    assert k8s(pl=mock_pl) == build_k8s_segment(namespace='default')
+
+
+@pytest.mark.usefixtures('mock_k8s_no_namespace')
+def test_no_namespace(mock_pl):
     assert k8s(pl=mock_pl) == build_k8s_segment(namespace='default')
 
 

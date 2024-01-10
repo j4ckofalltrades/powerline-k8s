@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "powerline-k8s"
-version = "1.5.1"
+version = "1.5.2"
 description = "A custom Powerline segment for displaying the current Kubernetes context and namespace"
 authors = ["Jordan Duabe <me@jduabe.dev>"]
 license = "MIT"
@@ -13,8 +13,8 @@ keywords = ["powerline", "kubernetes"]
 "Bug Tracker" = "https://github.com/j4ckofalltrades/powerline-k8s/issues"
 
 [tool.poetry.dependencies]
-python = "^3.7"
-kubernetes = "^27.2.0"
+python = "^3.9"
+kubernetes = "^29.0.0"
 powerline-status = "^2.7"
 
 [tool.poetry.group.test.dependencies]

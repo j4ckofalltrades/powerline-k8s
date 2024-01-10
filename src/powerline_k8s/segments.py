@@ -54,8 +54,8 @@ class KubernetesSegment(Segment):
         """Resolves the current active Kubernetes context (and namespace) from `$KUBECONFIG`."""
         try:
             current_context = config.list_kube_config_contexts()[1]
-            return current_context['name'] or SegmentContent.CTX_DEFAULT.value, \
-                current_context['context']['namespace'] or SegmentContent.NS_DEFAULT.value
+            return current_context.get('name', SegmentContent.CTX_DEFAULT.value) or SegmentContent.CTX_DEFAULT.value, \
+                   current_context.get('context', {}).get('namespace', SegmentContent.NS_DEFAULT.value) or SegmentContent.NS_DEFAULT.value
         except Exception as e:
             pl.error(e)
 
