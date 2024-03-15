@@ -26,13 +26,13 @@ class SegmentColorscheme(Enum):
 class SegmentContent(Enum):
     """Default values for segment's sections."""
 
-    CTX_DEFAULT = 'N/A'
+    CTX_DEFAULT = "N/A"
     """Default k8s context name."""
 
-    NS_DEFAULT = 'default'
+    NS_DEFAULT = "default"
     """Default k8s namespace name."""
 
-    K8S_ICON = u'\U00002638'
+    K8S_ICON = "\U00002638"
     """Default icon for segment."""
 
 
@@ -54,13 +54,18 @@ class KubernetesSegment(Segment):
         """Resolves the current active Kubernetes context (and namespace) from `$KUBECONFIG`."""
         try:
             current_context = config.list_kube_config_contexts()[1]
-            return current_context.get('name', SegmentContent.CTX_DEFAULT.value) or SegmentContent.CTX_DEFAULT.value, \
-                   current_context.get('context', {}).get('namespace', SegmentContent.NS_DEFAULT.value) or SegmentContent.NS_DEFAULT.value
+            return current_context.get(
+                "name", SegmentContent.CTX_DEFAULT.value
+            ) or SegmentContent.CTX_DEFAULT.value, current_context.get(
+                "context", {}
+            ).get(
+                "namespace", SegmentContent.NS_DEFAULT.value
+            ) or SegmentContent.NS_DEFAULT.value
         except Exception as e:
             pl.error(e)
 
     def __call__(self, pl):
-        pl.debug('Running powerline-k8s...')
+        pl.debug("Running powerline-k8s...")
 
         sections = []
 
@@ -74,18 +79,22 @@ class KubernetesSegment(Segment):
         elif int(show_segment) == 0:
             return sections
 
-        sections.append({
-            'contents': f'{SegmentContent.K8S_ICON.value} ',
-            'highlight_groups': [SegmentColorscheme.DEFAULT_HIGHLIGHT_GROUP.value],
-            'divider_highlight_group': SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
-        })
+        sections.append(
+            {
+                "contents": f"{SegmentContent.K8S_ICON.value} ",
+                "highlight_groups": [SegmentColorscheme.DEFAULT_HIGHLIGHT_GROUP.value],
+                "divider_highlight_group": SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
+            }
+        )
 
         context = ctx_info[0]
-        sections.append({
-            'contents': context,
-            'highlight_groups': [SegmentColorscheme.CONTEXT_HIGHLIGHT_GROUP.value],
-            'divider_highlight_group': SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
-        })
+        sections.append(
+            {
+                "contents": context,
+                "highlight_groups": [SegmentColorscheme.CONTEXT_HIGHLIGHT_GROUP.value],
+                "divider_highlight_group": SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
+            }
+        )
 
         show_namespace = os.getenv(SegmentVisibility.SHOW_NAMESPACE.value)
         if show_namespace is None:
@@ -93,29 +102,38 @@ class KubernetesSegment(Segment):
         elif int(show_namespace) == 0:
             return sections
 
-        separator = ':'
-        sections.append({
-            'contents': separator,
-            'highlight_groups': [SegmentColorscheme.DEFAULT_HIGHLIGHT_GROUP.value],
-            'divider_highlight_group': SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
-        })
+        separator = ":"
+        sections.append(
+            {
+                "contents": separator,
+                "highlight_groups": [SegmentColorscheme.DEFAULT_HIGHLIGHT_GROUP.value],
+                "divider_highlight_group": SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
+            }
+        )
 
         namespace = ctx_info[1]
-        sections.append({
-            'contents': namespace,
-            'highlight_groups': [SegmentColorscheme.NAMESPACE_HIGHLIGHT_GROUP.value],
-            'divider_highlight_group': SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
-        })
+        sections.append(
+            {
+                "contents": namespace,
+                "highlight_groups": [
+                    SegmentColorscheme.NAMESPACE_HIGHLIGHT_GROUP.value
+                ],
+                "divider_highlight_group": SegmentColorscheme.DIVIDER_HIGHLIGHT_GROUP.value,
+            }
+        )
 
         return sections
 
 
-k8s = with_docstring(KubernetesSegment(), """Return the current Kubernetes context and namespace.
+k8s = with_docstring(
+    KubernetesSegment(),
+    """Return the current Kubernetes context and namespace.
 
-It will show the current context and namespace from `$KUBECONFIG`.
+    It will show the current context and namespace from `$KUBECONFIG`.
 
-Divider highlight group used: ``k8s:divider``.
+    Divider highlight group used: ``k8s:divider``.
 
-Highlight groups used: ``k8s``, ``k8s_context``, ``k8s_namespace``.
-""")
+    Highlight groups used: ``k8s``, ``k8s_context``, ``k8s_namespace``.
+    """,
+)
 """Custom segment entry point."""
