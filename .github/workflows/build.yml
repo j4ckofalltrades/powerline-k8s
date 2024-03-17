@@ -2,12 +2,7 @@ name: "CI"
 
 permissions: "read-all"
 
-on:
-  push:
-    branches:
-      - "main"
-  pull_request:
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 
 defaults:
   run:
@@ -17,6 +12,15 @@ env:
   FORCE_COLOR: "1"
     
 jobs:
+  ruff:
+    name: "Lint"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@v4"
+      - uses: "chartboost/ruff-action@v1"
+        with:
+          src: "./src"
+
   test:
     strategy:
       fail-fast: false
