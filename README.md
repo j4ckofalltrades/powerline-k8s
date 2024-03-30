@@ -48,6 +48,11 @@ see [Powerline Segment reference](https://powerline.readthedocs.io/en/master/con
 - If adding the segment to the shell, edit `~/.config/powerline/themes/shell/default.json`.
 - If adding the segment to the tmux status line, edit `~/.config/powerline/themes/tmux/default.json`.
 
+### Alternative config location
+
+If your Kubernetes config file is not in the default location `~/.kube/config`, you can point to it by setting
+the value of the `$KUBECONFIG` environment variable to where your config file is.
+
 ### Toggle visibility
 
 Toggle entire segment or specific section's visibility with the following environment variables:
