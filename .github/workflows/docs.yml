@@ -20,7 +20,7 @@ jobs:
 
       - name: "Generate docs"
         run: |
-          uv sync --extra docs --python
+          uv sync --extra docs --python=3.10
           uv run pdoc -o docs src/powerline_k8s
 
       - name: "Publish docs"

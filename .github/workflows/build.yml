@@ -46,4 +46,4 @@ jobs:
     - name: "Run tests"
       run: |
         uv sync --extra test --python="${{ matrix.python-version }}"
-        uv run pytest --python="${{ matrix.python-version }}"
+        uv run pytest

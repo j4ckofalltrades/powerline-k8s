@@ -27,7 +27,7 @@ jobs:
     - name: "Generate coverage report"
       run: |
         uv sync --extra test --python=3.10
-        uv run pytest --cov=src/powerline_k8s --cov-report=xml --python=3.10
+        uv run pytest --cov=src/powerline_k8s --cov-report=xml
 
     - name: "Upload coverage to Codecov"
       uses: "codecov/codecov-action@v5"
