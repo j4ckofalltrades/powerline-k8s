@@ -10,20 +10,21 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: "Checkout"
+        uses: "actions/checkout@v4"
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: "Setup uv"
+        uses: "astral-sh/setup-uv@v6"
         with:
-          python-version: 3.x
+          python-version: "3.10"
 
-      - name: Generate docs
+      - name: "Generate docs"
         run: |
-          python -m pip install poetry
-          poetry install
-          poetry run pdoc -o docs src/powerline_k8s
+          uv sync --extra docs --python
+          uv run pdoc -o docs src/powerline_k8s
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: "Publish docs"
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
